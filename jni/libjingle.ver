@@ -1,0 +1,24 @@
+{ global:
+xmpp_service_wait;
+xmpp_set_service_listener;
+xmpp_service_start;
+xmpp_service_try_start;
+xmpp_get_service_state;
+xmpp_get_service_jid;
+xmpp_lasterror;
+xmpp_strerror;
+xmpp_p2p_create;
+xmpp_p2p_create_with_callback;
+xmpp_p2p_close;
+xmpp_p2p_read;
+xmpp_p2p_write;
+xmpp_p2p_listener;
+xmpp_p2p_event_listener;
+xmpp_p2p_get_peer;
+xmpp_p2p_get_id;
+xmpp_p2p_post_event;
+xmpp_p2p_connect;
+xmpp_get_rosters;
+xmpp_free_rosters;
+xmpp_set_roster_listener;
+local: *; };

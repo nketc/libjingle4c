@@ -1,0 +1,125 @@
+talk=~/project/libjingle/ {
+ Makefile.am
+ jingle.symbolstalk_base::SocketAddress(host, atoi(port.c_str()));
+ service=./service/ {
+  Makefile.am
+  talk_base::SocketAddress(host, atoi(port.talk_base::SocketAddress(host, atoi(port.talk_base::SocketAddress(host, atoi(port.c_str()));c_str()));c_str()));talkclient.cc
+  talkclient.h
+  xmppsocket.cc
+  talk_base::SocketAddress(host, atoi(port.c_str()));xmppsocket.h
+  status.h
+  presenceouttask.cc
+  presenceouttask.h
+  presencepushtask.cc
+  presencepushtask.h
+  jingleinfotask.cc
+  jingleinfotask.h
+  rostergettask.cc
+  rostergettask.h
+  muc.h
+  xmpppump.cc
+  xmpppump.h
+ }
+ cif=./cif/ {
+  Makefile.am
+  debuglog.h
+  debuglog.cc
+  notify.cc
+  notify.h
+  xmpp.cc
+  xmpp.h
+  roster.cc
+  roster.h
+  jinglep2p.h
+  jinglep2p.cc
+ }
+ base=./talk/base/ {
+  basicpacketsocketfactory.cc
+  sigslot.h
+  openssladapter.cc
+  openssladapter.h
+  asyncsocket.cc
+  asyncsocket.h
+  socket.h
+  physicalsocketserver.cc
+  physicalsocketserver.h
+  nethelpers.h
+  nethelpers.cc
+  stream.h
+  stream.cc
+  thread.cc
+  thread.h
+  signalthread.cc
+  messagequeue.h
+  messagequeue.cc
+  task.cc
+  task.h
+  taskparent.cc
+  taskparent.h
+  taskrunner.cc
+  taskrunner.h
+ }
+ call=./talk/examples/call/ {
+  call_main.cc
+  console.cc
+  console.h
+  callclient.cc
+  callclient.h
+  status.h
+  muc.h
+  presencepushtask.cc
+  presencepushtask.h
+ }
+ phone=./talk/session/phone/ {
+  mediasessionclient.cc
+  mediasessionclient.h
+  call.cc
+  call.h
+ }
+ p2p=./talk/p2p/ {
+  ./client/basicportallocator.cc
+  ./client/basicportallocator.h
+  ./base/sessionmanager.cc
+  ./base/sessionmanager.h
+  ./base/session.cc
+  ./base/session.h
+  ./base/sessionmessages.h
+  ./base/port.cc
+  ./base/port.h
+  ./base/stun.cc
+  ./base/stun.h
+  ./base/stunport.cc
+  ./base/stunport.h
+  ./base/stunrequest.cc
+  ./base/stunrequest.h
+  ./base/p2ptransportchannel.cc
+  ./base/p2ptransportchannel.h
+  ./base/transportchannelimpl.h
+  ./base/transportchannel.h
+  ./base/transportchannel.cc
+  ./base/pseudotcp.cc
+  ./base/pseudotcp.h
+ }
+ tunnel=./talk/session/tunnel/ {
+  tunnelsessionclient.cc
+  tunnelsessionclient.h
+  pseudotcpchannel.cc
+  pseudotcpchannel.h
+ }
+ xmpp=./talk/xmpp/ {
+  xmppclient.cc
+  xmppclient.h
+  xmppengine.h
+  xmpplogintask.cc
+  xmpplogintask.h
+  xmpptask.cc
+  xmpptask.h
+ }
+ xmllite=./talk/xmllite/ {
+  xmlelement.h
+ }
+ tests=./tests/ {
+  Makefile.am
+  main_test.c
+ }
+}

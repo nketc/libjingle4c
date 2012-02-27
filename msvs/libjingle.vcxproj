@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>libjingle</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;COMPILER_MSVC;EXPAT_RELATIVE_PATH;SRTP_RELATIVE_PATH;XML_STATIC;FEATURE_ENABLE_SSL;HAVE_SRTP;LOGGING=1;_ATL_CSTRING_EXPLICIT_CONSTRUCTORS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;_HAS_EXCEPTIONS=0;WINVER=0x0500;_WIN32_WINNT=0x0501;_WIN32_IE=0x0501;NTDDI_VERSION=NTDDI_WINXP;_WINDOWS;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../;../third_party/expat/v2_0_1/Source/lib;../third_party/srtp/include;../third_party/srtp/crypto/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ExceptionHandling>false</ExceptionHandling>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/EHs-c- /GR- /wd4996 /w14701 /w14702 /w14706 /w14709 /w14063 /w14064 /w14057 /w14263 /w14266 /w14296 /w14355 /wd4275 /wd4819 %(AdditionalOptions)</AdditionalOptions>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Program Files\GnuWin32\lib\libcrypto.a;C:\Program Files\GnuWin32\lib\libssl.a;../third_party/pthread/lib/pthreadVC2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <OutputFile>$(SolutionDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cif\base64.cc">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\cif_base64.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\cif\chat.cc" />
+    <ClCompile Include="..\cif\debuglog.cc" />
+    <ClCompile Include="..\cif\jinglep2p.cc" />
+    <ClCompile Include="..\cif\notify.cc" />
+    <ClCompile Include="..\cif\roster.cc">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="..\cif\xmpp.cc" />
+    <ClCompile Include="..\service\jingleinfotask.cc" />
+    <ClCompile Include="..\service\message.cc" />
+    <ClCompile Include="..\service\pingtask.cc" />
+    <ClCompile Include="..\service\presenceouttask.cc" />
+    <ClCompile Include="..\service\presencepushtask.cc" />
+    <ClCompile Include="..\service\rostergettask.cc" />
+    <ClCompile Include="..\service\talkclient.cc" />
+    <ClCompile Include="..\service\xmppauth.cc" />
+    <ClCompile Include="..\service\xmpppump.cc" />
+    <ClCompile Include="..\service\xmppsocket.cc" />
+    <ClCompile Include="..\service\xmppthread.cc" />
+    <ClCompile Include="..\talk\base\asyncfile.cc" />
+    <ClCompile Include="..\talk\base\asynchttprequest.cc" />
+    <ClCompile Include="..\talk\base\asyncsocket.cc" />
+    <ClCompile Include="..\talk\base\asynctcpsocket.cc" />
+    <ClCompile Include="..\talk\base\asyncudpsocket.cc" />
+    <ClCompile Include="..\talk\base\autodetectproxy.cc" />
+    <ClCompile Include="..\talk\base\base64.cc" />
+    <ClCompile Include="..\talk\base\basicpacketsocketfactory.cc" />
+    <ClCompile Include="..\talk\base\bytebuffer.cc" />
+    <ClCompile Include="..\talk\base\checks.cc" />
+    <ClCompile Include="..\talk\base\common.cc" />
+    <ClCompile Include="..\talk\base\diskcache.cc" />
+    <ClCompile Include="..\talk\base\event.cc" />
+    <ClCompile Include="..\talk\base\fileutils.cc" />
+    <ClCompile Include="..\talk\base\firewallsocketserver.cc" />
+    <ClCompile Include="..\talk\base\flags.cc" />
+    <ClCompile Include="..\talk\base\helpers.cc" />
+    <ClCompile Include="..\talk\base\host.cc" />
+    <ClCompile Include="..\talk\base\httpbase.cc" />
+    <ClCompile Include="..\talk\base\httpclient.cc" />
+    <ClCompile Include="..\talk\base\httpcommon.cc" />
+    <ClCompile Include="..\talk\base\httprequest.cc" />
+    <ClCompile Include="..\talk\base\logging.cc" />
+    <ClCompile Include="..\talk\base\md5.cc" />
+    <ClCompile Include="..\talk\base\messagehandler.cc" />
+    <ClCompile Include="..\talk\base\messagequeue.cc" />
+    <ClCompile Include="..\talk\base\nethelpers.cc" />
+    <ClCompile Include="..\talk\base\network.cc" />
+    <ClCompile Include="..\talk\base\openssladapter.cc" />
+    <ClCompile Include="..\talk\base\pathutils.cc" />
+    <ClCompile Include="..\talk\base\physicalsocketserver.cc" />
+    <ClCompile Include="..\talk\base\proxydetect.cc" />
+    <ClCompile Include="..\talk\base\proxyinfo.cc" />
+    <ClCompile Include="..\talk\base\ratetracker.cc" />
+    <ClCompile Include="..\talk\base\schanneladapter.cc" />
+    <ClCompile Include="..\talk\base\signalthread.cc" />
+    <ClCompile Include="..\talk\base\socketadapters.cc" />
+    <ClCompile Include="..\talk\base\socketaddress.cc" />
+    <ClCompile Include="..\talk\base\socketaddresspair.cc" />
+    <ClCompile Include="..\talk\base\socketpool.cc" />
+    <ClCompile Include="..\talk\base\socketstream.cc" />
+    <ClCompile Include="..\talk\base\ssladapter.cc" />
+    <ClCompile Include="..\talk\base\sslsocketfactory.cc" />
+    <ClCompile Include="..\talk\base\stream.cc" />
+    <ClCompile Include="..\talk\base\stringdigest.cc" />
+    <ClCompile Include="..\talk\base\stringencode.cc" />
+    <ClCompile Include="..\talk\base\stringutils.cc" />
+    <ClCompile Include="..\talk\base\task.cc" />
+    <ClCompile Include="..\talk\base\taskparent.cc" />
+    <ClCompile Include="..\talk\base\taskrunner.cc" />
+    <ClCompile Include="..\talk\base\thread.cc" />
+    <ClCompile Include="..\talk\base\time.cc" />
+    <ClCompile Include="..\talk\base\urlencode.cc" />
+    <ClCompile Include="..\talk\base\win32.cc" />
+    <ClCompile Include="..\talk\base\win32filesystem.cc" />
+    <ClCompile Include="..\talk\base\win32securityerrors.cc" />
+    <ClCompile Include="..\talk\base\win32socketinit.cc" />
+    <ClCompile Include="..\talk\base\win32socketserver.cc" />
+    <ClCompile Include="..\talk\base\win32window.cc" />
+    <ClCompile Include="..\talk\base\winfirewall.cc" />
+    <ClCompile Include="..\talk\base\winping.cc" />
+    <ClCompile Include="..\talk\base\worker.cc" />
+    <ClCompile Include="..\talk\p2p\base\constants.cc" />
+    <ClCompile Include="..\talk\p2p\base\p2ptransport.cc" />
+    <ClCompile Include="..\talk\p2p\base\p2ptransportchannel.cc" />
+    <ClCompile Include="..\talk\p2p\base\parsing.cc" />
+    <ClCompile Include="..\talk\p2p\base\port.cc" />
+    <ClCompile Include="..\talk\p2p\base\pseudotcp.cc" />
+    <ClCompile Include="..\talk\p2p\base\rawtransport.cc" />
+    <ClCompile Include="..\talk\p2p\base\rawtransportchannel.cc" />
+    <ClCompile Include="..\talk\p2p\base\relayport.cc" />
+    <ClCompile Include="..\talk\p2p\base\relayserver.cc" />
+    <ClCompile Include="..\talk\p2p\base\session.cc" />
+    <ClCompile Include="..\talk\p2p\base\sessiondescription.cc" />
+    <ClCompile Include="..\talk\p2p\base\sessionmanager.cc" />
+    <ClCompile Include="..\talk\p2p\base\sessionmessages.cc" />
+    <ClCompile Include="..\talk\p2p\base\stun.cc" />
+    <ClCompile Include="..\talk\p2p\base\stunport.cc" />
+    <ClCompile Include="..\talk\p2p\base\stunrequest.cc" />
+    <ClCompile Include="..\talk\p2p\base\stunserver.cc" />
+    <ClCompile Include="..\talk\p2p\base\tcpport.cc" />
+    <ClCompile Include="..\talk\p2p\base\transport.cc" />
+    <ClCompile Include="..\talk\p2p\base\transportchannel.cc" />
+    <ClCompile Include="..\talk\p2p\base\transportchannelproxy.cc" />
+    <ClCompile Include="..\talk\p2p\base\udpport.cc" />
+    <ClCompile Include="..\talk\p2p\client\basicportallocator.cc" />
+    <ClCompile Include="..\talk\p2p\client\httpportallocator.cc" />
+    <ClCompile Include="..\talk\p2p\client\socketmonitor.cc" />
+    <ClCompile Include="..\talk\session\tunnel\pseudotcpchannel.cc" />
+    <ClCompile Include="..\talk\session\tunnel\securetunnelsessionclient.cc" />
+    <ClCompile Include="..\talk\session\tunnel\tunnelsessionclient.cc" />
+    <ClCompile Include="..\talk\xmllite\qname.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlbuilder.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlconstants.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlelement.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlnsstack.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlparser.cc" />
+    <ClCompile Include="..\talk\xmllite\xmlprinter.cc" />
+    <ClCompile Include="..\talk\xmpp\constants.cc">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\xmpp_constants.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\talk\xmpp\iqtask.cc" />
+    <ClCompile Include="..\talk\xmpp\jid.cc" />
+    <ClCompile Include="..\talk\xmpp\mucroomlookuptask.cc" />
+    <ClCompile Include="..\talk\xmpp\ratelimitmanager.cc" />
+    <ClCompile Include="..\talk\xmpp\saslmechanism.cc" />
+    <ClCompile Include="..\talk\xmpp\xmppclient.cc" />
+    <ClCompile Include="..\talk\xmpp\xmppengineimpl.cc" />
+    <ClCompile Include="..\talk\xmpp\xmppengineimpl_iq.cc" />
+    <ClCompile Include="..\talk\xmpp\xmpplogintask.cc" />
+    <ClCompile Include="..\talk\xmpp\xmppstanzaparser.cc" />
+    <ClCompile Include="..\talk\xmpp\xmpptask.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cif\base64.h" />
+    <ClInclude Include="..\cif\chat.h" />
+    <ClInclude Include="..\cif\debuglog.h" />
+    <ClInclude Include="..\cif\jinglep2p.h" />
+    <ClInclude Include="..\cif\notify.h" />
+    <ClInclude Include="..\cif\roster.h" />
+    <ClInclude Include="..\cif\xmpp.h" />
+    <ClInclude Include="..\service\iceconfig.h" />
+    <ClInclude Include="..\service\jingleinfotask.h" />
+    <ClInclude Include="..\service\message.h" />
+    <ClInclude Include="..\service\muc.h" />
+    <ClInclude Include="..\service\pingtask.h" />
+    <ClInclude Include="..\service\presenceouttask.h" />
+    <ClInclude Include="..\service\presencepushtask.h" />
+    <ClInclude Include="..\service\rostergettask.h" />
+    <ClInclude Include="..\service\status.h" />
+    <ClInclude Include="..\service\talkclient.h" />
+    <ClInclude Include="..\service\xmppauth.h" />
+    <ClInclude Include="..\service\xmpppump.h" />
+    <ClInclude Include="..\service\xmppsocket.h" />
+    <ClInclude Include="..\service\xmppthread.h" />
+    <ClInclude Include="..\talk\base\base64.h" />
+    <ClInclude Include="..\talk\base\thread.h" />
+    <ClInclude Include="..\talk\p2p\base\port.h" />
+    <ClInclude Include="..\talk\p2p\base\relayport.h" />
+    <ClInclude Include="..\talk\p2p\base\relayserver.h" />
+    <ClInclude Include="..\talk\p2p\base\stun.h" />
+    <ClInclude Include="..\talk\p2p\base\stunport.h" />
+    <ClInclude Include="..\talk\p2p\base\stunrequest.h" />
+    <ClInclude Include="..\talk\p2p\base\stunserver.h" />
+    <ClInclude Include="..\talk\p2p\base\udpport.h" />
+    <ClInclude Include="..\talk\p2p\client\basicportallocator.h" />
+    <ClInclude Include="..\talk\p2p\client\httpportallocator.h" />
+    <ClInclude Include="..\talk\p2p\client\sessionmanagertask.h" />
+    <ClInclude Include="..\talk\p2p\client\sessionsendtask.h" />
+    <ClInclude Include="..\talk\p2p\client\socketmonitor.h" />
+    <ClInclude Include="..\talk\session\tunnel\pseudotcpchannel.h" />
+    <ClInclude Include="..\talk\session\tunnel\securetunnelsessionclient.h" />
+    <ClInclude Include="..\talk\session\tunnel\tunnelsessionclient.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

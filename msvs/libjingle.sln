@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libjingle", "libjingle.vcxproj", "{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750} = {EEF031CB-FED8-451E-A471-91EC8D4F6750}
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A} = {6365E1CF-843E-4EFF-8AFC-F9579AEE660A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat_static", "..\third_party\expat\v2_0_1\Source\expat_static\expat_static.vcxproj", "{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\tests\test\test.vcxproj", "{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345} = {B248CE5C-0E26-4FCA-82EB-31EAC15CD345}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "srtp", "..\third_party\srtp\srtp.vcxproj", "{EEF031CB-FED8-451E-A471-91EC8D4F6750}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Dll|Win32 = Debug Dll|Win32
+		Debug|Win32 = Debug|Win32
+		Release Dll|Win32 = Release Dll|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Debug Dll|Win32.ActiveCfg = Debug|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Debug Dll|Win32.Build.0 = Debug|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Debug|Win32.Build.0 = Debug|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Release Dll|Win32.ActiveCfg = Release|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Release Dll|Win32.Build.0 = Release|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Release|Win32.ActiveCfg = Release|Win32
+		{B248CE5C-0E26-4FCA-82EB-31EAC15CD345}.Release|Win32.Build.0 = Release|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Debug Dll|Win32.ActiveCfg = Debug|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Debug Dll|Win32.Build.0 = Debug|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Debug|Win32.Build.0 = Debug|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Release Dll|Win32.ActiveCfg = Release|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Release Dll|Win32.Build.0 = Release|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Release|Win32.ActiveCfg = Release|Win32
+		{6365E1CF-843E-4EFF-8AFC-F9579AEE660A}.Release|Win32.Build.0 = Release|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Debug Dll|Win32.ActiveCfg = Debug|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Debug Dll|Win32.Build.0 = Debug|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Debug|Win32.Build.0 = Debug|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Release Dll|Win32.ActiveCfg = Release|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Release Dll|Win32.Build.0 = Release|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Release|Win32.ActiveCfg = Release|Win32
+		{6BEF63C7-E96D-4E4E-B0F8-CF4564FBDA9C}.Release|Win32.Build.0 = Release|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Debug Dll|Win32.ActiveCfg = Debug Dll|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Debug Dll|Win32.Build.0 = Debug Dll|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Debug|Win32.Build.0 = Debug|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Release Dll|Win32.ActiveCfg = Release Dll|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Release Dll|Win32.Build.0 = Release Dll|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Release|Win32.ActiveCfg = Release|Win32
+		{EEF031CB-FED8-451E-A471-91EC8D4F6750}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
